@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://b7v8lhwennp1b" path="res://autumn_field_puresky_1k.exr" id="1_ig7tw"]
 [ext_resource type="Shader" uid="uid://eh10n8tfsad5" path="res://water.gdshader" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dlb41syr0ao8b" path="res://water_normal_map.png" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://dd3brkbllygmh" path="res://tfc_controller.gd" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://djqjnlkgdaabh" path="res://browser_input_fixes.gd" id="5_7mycd"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_34vc1"]
 panorama = ExtResource("1_ig7tw")
@@ -35,3 +37,10 @@ transform = Transform3D(-0.6204389, 0.78425485, 0, -0.78425485, -0.6204389, 0, 0
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1582791170]
 size = Vector3(10, 1, 10)
 material = SubResource("ShaderMaterial_dbsrw")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1356224115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.786683, 0)
+script = ExtResource("4_lquwl")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=580719116]
+script = ExtResource("5_7mycd")
