@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://clqajacl8nejk"]
 
+[ext_resource type="Texture2D" uid="uid://b7v8lhwennp1b" path="res://autumn_field_puresky_1k.exr" id="1_ig7tw"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_34vc1"]
+panorama = ExtResource("1_ig7tw")
+
+[sub_resource type="Sky" id="Sky_wgelq"]
+sky_material = SubResource("PanoramaSkyMaterial_34vc1")
+
+[sub_resource type="Environment" id="Environment_dbsrw"]
+background_mode = 2
+sky = SubResource("Sky_wgelq")
+
 [node name="Node3D" type="Node3D" unique_id=1327995878]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2080127223]
+environment = SubResource("Environment_dbsrw")
