@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="godot blender kurssi"
+run/main_scene="uid://clqajacl8nejk"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
